@@ -18,10 +18,31 @@ struct Node* SortedMerge(struct Node* a, struct Node* b);
 void FrontBackSplit(struct Node* source, struct Node** frontRef, struct Node** backRef);
 
 
+void printList(struct Node * p){
 
-void printList(struct Node * p);
-struct Node* freeptr(struct Node* ptr);
 
+        while (p!=NULL){
+                if (strlen(p->line) > 2){
+                        printf("%s\n", p->line);
+                }
+
+
+                p = p->next;
+
+
+        }
+	return;
+};
+struct Node* freeptr(struct Node* ptr){
+        if (ptr == NULL){
+
+                return NULL;
+        }
+	free(freeptr(ptr->next));
+
+        return NULL;
+
+};
 
 int getKey(char * sortBy){
         int key=-1;
