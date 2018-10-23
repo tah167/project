@@ -19,7 +19,7 @@ void FrontBackSplit(struct Node* source, struct Node** frontRef, struct Node** b
 
 
 void printList(struct Node * p){
-
+//ACCIDENTALY SAVED OVER WHAT I HAD HERE, SOMETHING WITH OPENING NEWFILE TO CREATE IT
 
         while (p!=NULL){
                 if (strlen(p->line) > 2){
